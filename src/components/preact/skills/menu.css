@@ -1,0 +1,12 @@
+menu > div {
+  @apply flex items-center gap-2 py-1 px-2 rounded-sm cursor-pointer hover:bg-highlight transition-all;
+}
+
+menu > div > li,
+menu > div > svg {
+  @apply bg-transparent text-text-low;
+}
+
+.selected {
+  @apply text-text bg-highlight;
+}

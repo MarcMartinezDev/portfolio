@@ -1,0 +1,38 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  html {
+    @apply bg-primary;
+  }
+  * {
+    @apply text-text font-sans;
+  }
+  body {
+    @apply flex items-center justify-center w-2/5 m-auto;
+  }
+  h2 {
+    @apply text-xl font-semibold;
+  }
+</style> 

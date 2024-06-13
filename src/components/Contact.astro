@@ -1,0 +1,25 @@
+---
+import Card from "./Card.astro";
+---
+
+<div class="grid grid-cols-2 gap-4">
+  <Card name="Barcelona, Spain" srcImg="/location.png" />
+  <Card
+    name="github/MarcMartinezDev"
+    srcImg="/github.png"
+    isLink={true}
+    href="https://github.com/MarcMartinezDev"
+  />
+  <Card
+    name="marcmh1605@gmail.com"
+    srcImg="/email.png"
+    isLink={true}
+    href="mailto:marcmh1605@gmail.com"
+  />
+  <Card
+    name="linkedin/marc-martinez-her"
+    srcImg="/linkedin.png"
+    isLink={true}
+    href="https://www.linkedin.com/in/marc-martinez-her/"
+  />
+</div>

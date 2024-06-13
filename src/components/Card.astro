@@ -1,0 +1,27 @@
+---
+interface Props {
+  name: string;
+  srcImg?: string;
+  isLink?: boolean;
+  href?: string;
+}
+
+const { name, srcImg, isLink, href } = Astro.props;
+---
+
+{
+  isLink ? (
+    <a
+      href={href}
+      class="flex items-center gap-4 pl-4 border-2 border-secondary rounded-sm py-3 min-w-full"
+    >
+      <img src={srcImg} alt={name} width={30} height={30} />
+      <p>{name}</p>
+    </a>
+  ) : (
+    <div class="flex items-center gap-4 pl-4 border-2 border-secondary rounded-sm py-3 min-w-full">
+      <img src={srcImg} alt={name} width={30} height={30} />
+      <p>{name}</p>
+    </div>
+  )
+}

@@ -1,0 +1,11 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<button class="p-2 border-2 border-secondary rounded-md">
+  {text}
+</button>

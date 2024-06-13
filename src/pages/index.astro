@@ -1,0 +1,50 @@
+---
+import Button from "../components/Button.astro";
+import Contact from "../components/Contact.astro";
+import Layout from "../layouts/Layout.astro";
+import MenuSkills from "../components/preact/skills/MenuSkills";
+import Projects from "../components/preact/projects/Projects";
+---
+
+<Layout title="Marc Martinez Dev">
+  <section>
+    <p>
+      ### Hello, I’m Albert. I'm a **video producer** who helps companies
+      improve their corporate presence in self media. My work has benefited over
+      **120 customers**, including Listed Companies, Small and Medium
+      Enterprises and etc.
+    </p>
+    <Button text="Contact me" />
+  </section>
+  <section>
+    <h2>Skills</h2>
+    <MenuSkills client:visible />
+  </section>
+  <section>
+    <h2>Projects</h2>
+    <Projects client:visible />
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <Contact />
+  </section>
+</Layout>
+
+<!-- end of main section -->
+<style>
+  menu > * {
+    @apply bg-transparent;
+  }
+  .menu-item {
+    @apply text-text-low;
+  }
+  .menu-item-container {
+    @apply flex items-center gap-2 p-1 rounded-md cursor-pointer hover:bg-highlight transition-all;
+  }
+  .selected {
+    @apply bg-highlight;
+  }
+  .selected > li {
+    @apply text-text;
+  }
+</style>
