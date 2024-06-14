@@ -1,4 +1,4 @@
-import "../../../styles/projects.css";
+import "./projects.css";
 import { PROJECTS as projects } from "./projects";
 import { useState } from "preact/hooks";
 import Card from "./Card";
