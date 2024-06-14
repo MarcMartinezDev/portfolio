@@ -36,7 +36,7 @@ const Projects = () => {
           <li class={menu === "finish" ? "selected" : ""}>Finish</li>
         </div>
       </menu>
-      <div class="grid grid-cols-2 gap-4 min-h-[500px]">
+      <div class="grid grid-cols-3 gap-4 min-h-[500px]">
         {projectsFiltered.map(project => (
           <Card
             key={project.name}
