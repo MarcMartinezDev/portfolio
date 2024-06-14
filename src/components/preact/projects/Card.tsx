@@ -1,26 +1,20 @@
+import { type ProjectCard } from "../../../types.d";
 import type { FC } from "preact/compat";
-
-interface ProjectCard {
-  name: string;
-  srcImg: string;
-  desc: string;
-  status: string;
-  tech: string[];
-  href: string;
-}
 
 const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
   return (
     <div class="flex flex-col">
-      <img src={srcImg} alt={name} class="object-cover" />
-      <div class="flex flex-col gap-4 p-2 bg-highlight rounded-sm">
+      <div class="min-h-[200px]">
+        <img src={srcImg} alt={name} class="object-contain w-full h-full" />
+      </div>
+      <div class="flex flex-col justify-between h-full gap-2 p-2 bg-highlight rounded-sm">
         <h3 class="text-center text-lg font-semibold">{name}</h3>
-        <p class="card-description">{desc}</p>
-        <div class="tech-container flex flex-wrap gap-2 justify-evenly">
+        <p>{desc}</p>
+        <div class="grid grid-cols-2 gap-2 justify-evenly">
           {tech.map(item => (
             <div
               key={item}
-              class="flex justify-center items-center gap-2 px-2 py-1 rounded-sm bg-primary"
+              class="flex justify-center items-center gap-2 px-1 py-1 rounded-sm bg-primary"
             >
               <img
                 src={`/${item}.png`}
@@ -28,7 +22,7 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
                 width={20}
                 height={20}
               />
-              <p>{item}</p>
+              <p class="text-sm">{item}</p>
             </div>
           ))}
         </div>
@@ -42,7 +36,7 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
             ) : (
               <div class="projects-pending"></div>
             )}
-            <span class="card-status">{status}</span>
+            <span>{status}</span>
           </div>
         </div>
       </div>

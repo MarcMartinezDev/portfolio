@@ -1,9 +1,15 @@
 import "../../../styles/projects.css";
+import { PROJECTS as projects } from "./projects";
 import { useState } from "preact/hooks";
-import { AllProjects } from "./Childrens";
+import Card from "./Card";
 
 const Projects = () => {
   const [menu, setMenu] = useState("all");
+
+  const projectsFiltered =
+    menu === "all"
+      ? projects
+      : projects.filter(project => project.status === menu);
 
   return (
     <div>
@@ -30,8 +36,18 @@ const Projects = () => {
           <li class={menu === "finish" ? "selected" : ""}>Finish</li>
         </div>
       </menu>
-      <div>
-        <AllProjects />
+      <div class="grid grid-cols-2 gap-4 min-h-[500px]">
+        {projectsFiltered.map(project => (
+          <Card
+            key={project.name}
+            desc={project.desc}
+            href={project.href}
+            name={project.name}
+            srcImg={project.srcImg}
+            status={project.status}
+            tech={project.tech}
+          />
+        ))}
       </div>
     </div>
   );
