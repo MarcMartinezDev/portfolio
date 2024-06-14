@@ -1,13 +1,18 @@
-import "./menu.css";
+import "./skills.css";
 import { useState } from "preact/hooks";
-import {
-  LanguagesMenuSkills,
-  TechMenuSkills,
-  ToolsMenuSkills,
-} from "./MenuSkillsItems";
+import { SKILLS as skills } from "./skills";
+import Card from "./Card";
 
-const MenuSkills = () => {
+const Skills = () => {
   const [menu, setMenu] = useState("tech");
+
+  const skillsFiltered =
+    menu === "tech"
+      ? skills.filter(skill => skill.type === menu)
+      : menu === "tools"
+      ? skills.filter(skill => skill.type === menu)
+      : skills.filter(skill => skill.type === menu);
+
   return (
     <div class="flex flex-col gap-5">
       <menu class="flex gap-4">
@@ -71,13 +76,15 @@ const MenuSkills = () => {
           <li class={menu === "lang" ? "text-text" : ""}>Languages</li>
         </div>
       </menu>
-      <div class="min-h-[220px]">
-        {menu === "tech" && <TechMenuSkills />}
-        {menu === "tools" && <ToolsMenuSkills />}
-        {menu === "lang" && <LanguagesMenuSkills />}
+      <div class="grid grid-cols-3 gap-4 min-h-[220px]">
+        {skillsFiltered.map(skill => (
+          <div key={skill.name}>
+            <Card name={skill.name} srcImg={skill.srcImg} width={skill.width} />
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default MenuSkills;
+export default Skills;

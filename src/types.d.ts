@@ -6,3 +6,10 @@ export interface ProjectCard {
   tech: string[];
   href: string;
 }
+
+export interface SkillCard {
+  name: string;
+  type: string;
+  srcImg?: string;
+  width?: number;
+}
