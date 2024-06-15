@@ -1,0 +1,18 @@
+---
+interface Props {
+  srcImg: string;
+  altImg: string;
+  desc: string;
+}
+
+const { srcImg, altImg, desc } = Astro.props;
+---
+
+<div class="flex flex-col justify-evenly border-2 border-secondary rounded-sm p-4">
+  <div class="h-1/2">
+    <img src={srcImg} alt={altImg} class="object-contain w-full h-full"/>
+  </div>
+  <p>
+    {desc}
+  </p>
+</div>

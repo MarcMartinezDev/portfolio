@@ -1,0 +1,16 @@
+---
+import { SERVICES as services } from "./services.ts";
+import Card from "./Card.astro";
+---
+
+<div class="grid grid-cols-2">
+  {
+    services.map(service => (
+      <Card
+        srcImg={service.srcImg}
+        altImg={service.altImg}
+        desc={service.desc}
+      />
+    ))
+  }
+</div>

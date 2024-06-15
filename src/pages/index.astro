@@ -4,6 +4,7 @@ import Contact from "../components/Contact.astro";
 import Layout from "../layouts/Layout.astro";
 import MenuSkills from "../components/preact/skills/Skills.tsx";
 import Projects from "../components/preact/projects/Projects.tsx";
+import Services from "../components/services/Services.astro";
 ---
 
 <Layout title="Marc Martinez Dev">
@@ -19,6 +20,10 @@ import Projects from "../components/preact/projects/Projects.tsx";
   <section>
     <h2>Skills</h2>
     <MenuSkills client:visible />
+  </section>
+  <section>
+    <h2>Services</h2>
+    <Services />
   </section>
   <section>
     <h2>Projects</h2>

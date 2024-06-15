@@ -15,7 +15,7 @@ const Skills = () => {
 
   return (
     <div class="flex flex-col gap-5">
-      <menu class="flex gap-4">
+      <menu class="menu flex gap-4">
         <div
           class={menu === "tech" ? "bg-highlight" : ""}
           onClick={() => setMenu("tech")}
@@ -76,9 +76,9 @@ const Skills = () => {
           <li class={menu === "lang" ? "text-text" : ""}>Languages</li>
         </div>
       </menu>
-      <div class="grid grid-cols-3 gap-4 min-h-[220px]">
+      <div class="grid grid-cols-3 gap-4 min-h-[250px]">
         {skillsFiltered.map(skill => (
-          <div key={skill.name}>
+          <div key={skill.name} class=" animate-[enter_.6s]">
             <Card name={skill.name} srcImg={skill.srcImg} width={skill.width} />
           </div>
         ))}

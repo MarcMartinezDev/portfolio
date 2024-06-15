@@ -13,7 +13,7 @@ const Projects = () => {
 
   return (
     <div>
-      <menu class="projects-container flex gap-4">
+      <menu class="menu projects-container flex gap-4">
         <div
           class={menu === "all" ? "selected" : ""}
           onClick={() => setMenu("all")}

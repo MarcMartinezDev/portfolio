@@ -3,7 +3,7 @@ import type { FC } from "preact/compat";
 
 const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
   return (
-    <div class="flex flex-col">
+    <div class="flex flex-col animate-[enter_.6s]">
       <div class="min-h-[200px]">
         <img src={srcImg} alt={name} class="object-contain w-full h-full" />
       </div>
@@ -17,7 +17,7 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
               class="flex justify-center items-center gap-2 px-1 py-1 rounded-sm bg-primary"
             >
               <img
-                src={`/${item}.png`}
+                src={`/icons/${item}.png`}
                 alt={`${item} logo`}
                 width={20}
                 height={20}
@@ -28,7 +28,7 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
         </div>
         <div class="flex justify-between">
           <a href={href}>
-            <img src="/link.png" alt="link image" width={25} height={25} />
+            <img src="/icons/link.png" alt="link image" width={25} height={25} />
           </a>
           <div class="flex w-fit rounded-sm items-center gap-2 px-2 bg-secondary">
             {status === "finish" ? (

@@ -13,3 +13,9 @@ export interface SkillCard {
   srcImg?: string;
   width?: number;
 }
+
+export interface Services {
+  srcImg: string;
+  altImg: string;
+  desc: string;
+}
