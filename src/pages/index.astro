@@ -1,38 +1,52 @@
 ---
 import Button from "../components/Button.astro";
-import Contact from "../components/Contact.astro";
+import Contact from "../components/contact/Contact.astro";
 import Layout from "../layouts/Layout.astro";
 import MenuSkills from "../components/preact/skills/Skills.tsx";
 import Projects from "../components/preact/projects/Projects.tsx";
 import Services from "../components/services/Services.astro";
+import Menu from "../components/Menu.astro";
 ---
 
 <Layout title="Marc Martinez Dev">
+  <Menu />
   <section>
-    <p>
-      ### Hello, I’m Albert. I'm a **video producer** who helps companies
-      improve their corporate presence in self media. My work has benefited over
-      **120 customers**, including Listed Companies, Small and Medium
-      Enterprises and etc.
-    </p>
-    <Button text="Contact me" />
+    <div class="flex items-center">
+      <div class="flex flex-col gap-5">
+        <h1 class="text-2xl">Hi, I'm Marc!</h1>
+        <p>
+          I'm a Fullstack web developer desde hace más de 3 años en la creación
+          y mantenimiento de aplicaciones web modernas. Me especializo en el
+          desarrollo tanto del front-end como del back-end, asegurando una
+          integración fluida y un rendimiento óptimo de las aplicaciones. Mi
+          objetivo es construir soluciones web que sean escalables, seguras y
+          fáciles de usar.
+        </p>
+        <Button text="Contact" />
+      </div>
+      <img src="/images/main.png" alt="" width={300} />
+    </div>
   </section>
-  <section>
+  <section id="skills">
     <h2>Skills</h2>
     <MenuSkills client:visible />
   </section>
-  <section>
+  <section id="services">
     <h2>Services</h2>
     <Services />
   </section>
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
     <Projects client:visible />
   </section>
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
     <Contact />
   </section>
+  <footer class="flex items-center gap-2 justify-center mb-4">
+    <p>By</p>
+    <a href="">MarcMartinezDev</a>
+  </footer>
 </Layout>
 
 <!-- end of main section -->

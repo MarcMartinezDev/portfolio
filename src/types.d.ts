@@ -15,7 +15,6 @@ export interface SkillCard {
 }
 
 export interface Services {
-  srcImg: string;
-  altImg: string;
   desc: string;
+  dark?: boolean;
 }

@@ -2,8 +2,24 @@ import { type Services } from "../../types.d";
 
 export const SERVICES: Services[] = [
   {
-    srcImg: "/images/web-development.png",
-    altImg: "icon of web development service",
-    desc: "Web page design and developmnet, Landing page development",
+    desc: "Diseño y Desarrollo de Páginas Web",
+  },
+  {
+    desc: "Desarrollo de Aplicaciones Web. (SPA, Frontend and Backend development)",
+    dark: true,
+  },
+  {
+    desc: "Mantenimiento y Actualización de Sitios Web",
+    dark: true,
+  },
+  {
+    desc: "Optimización y Rendimiento",
+  },
+  {
+    desc: "Desarrollo de APIs y Servicios Web",
+  },
+  {
+    desc: "Creación de Contenido Interactivo",
+    dark: true,
   },
 ];

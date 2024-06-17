@@ -5,7 +5,11 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
   return (
     <div class="flex flex-col animate-[enter_.6s]">
       <div class="min-h-[200px]">
-        <img src={srcImg} alt={name} class="object-contain w-full h-full" />
+        <img
+          src={srcImg}
+          alt={name}
+          class="object-cover w-full h-full rounded-t-sm"
+        />
       </div>
       <div class="flex flex-col justify-between h-full gap-2 p-2 bg-highlight rounded-sm">
         <h3 class="text-center text-lg font-semibold">{name}</h3>
@@ -28,7 +32,12 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
         </div>
         <div class="flex justify-between">
           <a href={href}>
-            <img src="/icons/link.png" alt="link image" width={25} height={25} />
+            <img
+              src="/icons/link.png"
+              alt="link image"
+              width={25}
+              height={25}
+            />
           </a>
           <div class="flex w-fit rounded-sm items-center gap-2 px-2 bg-secondary">
             {status === "finish" ? (

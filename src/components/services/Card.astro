@@ -1,18 +1,18 @@
 ---
 interface Props {
-  srcImg: string;
-  altImg: string;
   desc: string;
+  dark?: boolean;
 }
 
-const { srcImg, altImg, desc } = Astro.props;
+const { desc, dark } = Astro.props;
 ---
 
-<div class="flex flex-col justify-evenly border-2 border-secondary rounded-sm p-4">
-  <div class="h-1/2">
-    <img src={srcImg} alt={altImg} class="object-contain w-full h-full"/>
-  </div>
-  <p>
+<div
+  class="flex min-h-[80px] items-center w-2/3 border-2 border-text-low rounded-sm px-5"
+>
+  <h3 class="text-lg font-semibold">
     {desc}
-  </p>
+  </h3>
 </div>
+
+<style></style>

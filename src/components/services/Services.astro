@@ -3,14 +3,6 @@ import { SERVICES as services } from "./services.ts";
 import Card from "./Card.astro";
 ---
 
-<div class="grid grid-cols-2">
-  {
-    services.map(service => (
-      <Card
-        srcImg={service.srcImg}
-        altImg={service.altImg}
-        desc={service.desc}
-      />
-    ))
-  }
+<div class="flex flex-col w-full items-center gap-8">
+  {services.map(service => <Card desc={service.desc} dark={service.dark} />)}
 </div>

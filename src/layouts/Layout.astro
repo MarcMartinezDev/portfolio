@@ -24,7 +24,7 @@ const { title } = Astro.props;
 
 <style is:global>
   html {
-    @apply bg-primary;
+    @apply bg-primary scroll-smooth;
   }
   * {
     @apply text-text font-sans;
@@ -33,7 +33,7 @@ const { title } = Astro.props;
     @apply flex items-center justify-center w-2/5 m-auto;
   }
   main {
-    @apply flex flex-col gap-24;
+    @apply flex flex-col gap-40;
   }
   section {
     @apply flex flex-col gap-10;
@@ -44,4 +44,4 @@ const { title } = Astro.props;
   .menu {
     @apply mb-6;
   }
-</style> 
+</style>
