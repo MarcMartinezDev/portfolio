@@ -7,12 +7,15 @@ interface Props {
 const { desc, dark } = Astro.props;
 ---
 
-<div
-  class="flex min-h-[80px] items-center w-2/3 border-2 border-text-low rounded-sm px-5"
->
-  <h3 class="text-lg font-semibold">
-    {desc}
-  </h3>
+<div class="flex items-center">
+  <div class="w-1/3">
+    <img src="/icons/astro.png" alt="" width={100} height={100}>
+  </div>
+  <div class="w-2/3">
+    <h3 class="text-lg font-semibold">
+      {desc}
+    </h3>
+  </div>
 </div>
 
 <style></style>
