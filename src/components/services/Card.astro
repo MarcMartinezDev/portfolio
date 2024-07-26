@@ -8,11 +8,23 @@ const { desc, dark } = Astro.props;
 ---
 
 <div
-  class="flex min-h-[80px] items-center w-2/3 border-2 border-text-low rounded-sm px-5"
+  class="flex aspect-square items-center rounded-sm text-center px-4 hover:bg-gradient-to-br hover:from-pink-600 hover:to-red-600 bg-secondary hover:scale-105 transition-all"
 >
-  <h3 class="text-lg font-semibold">
+  <h3 class="text-lg">
     {desc}
   </h3>
 </div>
 
-<style></style>
+<style>
+  @keyframes bg-services {
+    0% {
+      background-position: 14% 0%;
+    }
+    50% {
+      background-position: 87% 100%;
+    }
+    100% {
+      background-position: 14% 0%;
+    }
+  }
+</style>

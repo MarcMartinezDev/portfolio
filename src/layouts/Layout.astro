@@ -30,18 +30,30 @@ const { title } = Astro.props;
     @apply text-text font-sans;
   }
   body {
-    @apply flex items-center justify-center w-2/5 m-auto;
+    @apply flex items-center justify-center;
   }
   main {
-    @apply flex flex-col gap-40;
+    @apply relative flex flex-col w-2/5 m-auto;
   }
   section {
-    @apply flex flex-col gap-10;
+    @apply min-h-screen flex flex-col justify-center gap-10;
   }
   h2 {
-    @apply text-2xl font-semibold;
+    @apply text-5xl py-2 mb-10 font-semibold bg-clip-text bg-[length:400%_400%] text-transparent bg-gradient-to-r from-pink-400 to-red-600 animate-[shine_4s_infinite];
   }
   .menu {
     @apply mb-6;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 14% 0%;
+    }
+    50% {
+      background-position: 87% 100%;
+    }
+    100% {
+      background-position: 14% 0%;
+    }
   }
 </style>

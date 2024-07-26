@@ -1,15 +1,15 @@
 .projects-container > div {
   @apply flex items-center gap-2 py-1 px-2 rounded-sm cursor-pointer text-text-low hover:bg-highlight transition-all;
 }
-.selected {
-  @apply bg-highlight text-white;
+.projects-container  li {
+  @apply py-1;
 }
 .projects-all {
-  @apply rounded-full w-2 h-2 bg-blue-600;
+  @apply rounded-full w-3 h-3 bg-blue-300;
 }
 .projects-pending {
-  @apply rounded-full w-2 h-2 bg-orange-600;
+  @apply rounded-full w-3 h-3 bg-orange-300;
 }
 .projects-finish {
-  @apply rounded-full w-2 h-2 bg-green-600;
+  @apply rounded-full w-3 h-3 bg-green-300;
 }

@@ -12,28 +12,28 @@ const Projects = () => {
       : projects.filter(project => project.status === menu);
 
   return (
-    <div>
+    <div class="flex flex-col gap-10">
       <menu class="menu projects-container flex gap-4">
         <div
-          class={menu === "all" ? "selected" : ""}
+          class={menu === "all" ? "bg-menu-gradient" : ""}
           onClick={() => setMenu("all")}
         >
           <div class="projects-all"></div>
-          <li class={menu === "all" ? "selected" : ""}>All</li>
+          <li class={menu === "all" ? "text-white" : ""}>All</li>
         </div>
         <div
-          class={menu === "pending" ? "selected" : ""}
+          class={menu === "pending" ? "bg-menu-gradient" : ""}
           onClick={() => setMenu("pending")}
         >
           <div class="projects-pending"></div>
-          <li class={menu === "pending" ? "selected" : ""}>Pending</li>
+          <li class={menu === "pending" ? "text-white" : ""}>Pending</li>
         </div>
         <div
-          class={menu === "finish" ? "selected" : ""}
+          class={menu === "finish" ? "bg-menu-gradient" : ""}
           onClick={() => setMenu("finish")}
         >
           <div class="projects-finish"></div>
-          <li class={menu === "finish" ? "selected" : ""}>Finish</li>
+          <li class={menu === "finish" ? "text-white" : ""}>Finish</li>
         </div>
       </menu>
       <div class="grid grid-cols-3 gap-4 min-h-[500px]">

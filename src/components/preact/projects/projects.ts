@@ -17,4 +17,12 @@ export const PROJECTS: ProjectCard[] = [
     status: "pending",
     tech: ["astro", "typescript", "tailwind"],
   },
+  {
+    desc: "Poke Quiz Game",
+    href: "",
+    name: "Poke-Quiz",
+    srcImg: "/images/poke-quiz.png",
+    status: "finish",
+    tech: ["react", "javascript", "tailwind", "css"],
+  },
 ];

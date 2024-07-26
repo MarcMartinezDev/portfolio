@@ -1,30 +1,49 @@
 ---
+import "../global.css";
 import Button from "../components/Button.astro";
 import Contact from "../components/contact/Contact.astro";
 import Layout from "../layouts/Layout.astro";
 import MenuSkills from "../components/preact/skills/Skills.tsx";
 import Projects from "../components/preact/projects/Projects.tsx";
 import Services from "../components/services/Services.astro";
-import Menu from "../components/Menu.astro";
 ---
 
 <Layout title="Marc Martinez Dev">
-  <Menu />
-  <section>
-    <div class="flex items-center">
-      <div class="flex flex-col gap-5">
-        <h1 class="text-2xl">Hi, I'm Marc!</h1>
-        <p>
-          I'm a Fullstack web developer desde hace más de 3 años en la creación
-          y mantenimiento de aplicaciones web modernas. Me especializo en el
-          desarrollo tanto del front-end como del back-end, asegurando una
-          integración fluida y un rendimiento óptimo de las aplicaciones. Mi
-          objetivo es construir soluciones web que sean escalables, seguras y
-          fáciles de usar.
-        </p>
-        <Button text="Contact" />
-      </div>
-      <img src="/images/main.png" alt="" width={300} />
+  <section class="text-lg">
+    <div class="flex gap-4 mb-5 justify-end">
+      <a
+        href="https://github.com/MarcMartinezDev"
+        class="hover:scale-125 transition-all"
+        ><img src="/icons/github.webp" alt="" width="30" /></a
+      >
+      <a
+        href="https://www.linkedin.com/in/marc-martinez-her/"
+        class="hover:scale-125 transition-all"
+        ><img src="/icons/linkedin.webp" alt="" width="30" /></a
+      >
+    </div>
+    <h1 class="text-4xl bg-clip-text text-transparent bg-menu-gradient">
+      Hi! I'm Marc,
+    </h1>
+    <p>
+      Fullstack web developer with <span
+        class="text-2xl font-semibold bg-clip-text text-transparent bg-menu-gradient"
+        >+3 years</span
+      > programming and developing, desde Barcelona, España.
+    </p>
+    <p>
+      Centrado en crear aplicaciones y sitios web con código limpio y utilizando
+      las mejores prácticas, priorizando la escalabilidad y la optimización.
+    </p>
+    <p>
+      Interesado tanto en el front-end como en el back-end, al igual que
+      tecnologías de bases de datos.
+    </p>
+    <div class="grid grid-cols-4 gap-4 mt-6">
+      <Button link="#skills" text="Skills" img="/icons/tech.webp" />
+      <Button link="#services" text="Services" img="/icons/service.webp" />
+      <Button link="#projects" text="Projects" img="/icons/project.webp" />
+      <Button link="#contact" text="Contact" img="/icons/email.webp" />
     </div>
   </section>
   <section id="skills">

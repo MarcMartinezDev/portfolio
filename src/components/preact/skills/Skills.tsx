@@ -14,15 +14,15 @@ const Skills = () => {
       : skills.filter(skill => skill.type === menu);
 
   return (
-    <div class="flex flex-col gap-5">
-      <menu class="menu flex gap-4">
+    <div class="flex flex-col gap-14 w-full">
+      <menu class="menu flex gap-6">
         <div
-          class={menu === "tech" ? "bg-highlight" : ""}
+          class={menu === "tech" ? "bg-menu-gradient" : "hover:bg-highlight"}
           onClick={() => setMenu("tech")}
         >
           <svg
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -37,12 +37,12 @@ const Skills = () => {
           <li class={menu === "tech" ? "text-text" : ""}>Technologies</li>
         </div>
         <div
-          class={menu === "tools" ? "bg-highlight" : ""}
+          class={menu === "tools" ? "bg-menu-gradient" : "hover:bg-highlight"}
           onClick={() => setMenu("tools")}
         >
           <svg
-            width="20"
-            height="20"
+            width="25"
+            height="25"
             viewBox="0 0 1024 1024"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -54,12 +54,12 @@ const Skills = () => {
           <li class={menu === "tools" ? "text-text" : ""}>Tools</li>
         </div>
         <div
-          class={menu === "lang" ? "bg-highlight" : ""}
+          class={menu === "lang" ? "bg-menu-gradient" : "hover:bg-highlight"}
           onClick={() => setMenu("lang")}
         >
           <svg
-            width="30"
-            height="30"
+            width="35"
+            height="35"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -76,9 +76,9 @@ const Skills = () => {
           <li class={menu === "lang" ? "text-text" : ""}>Languages</li>
         </div>
       </menu>
-      <div class="grid grid-cols-3 gap-4 min-h-[250px]">
+      <div class="grid grid-cols-3 gap-4 min-h-[350px]">
         {skillsFiltered.map(skill => (
-          <div key={skill.name} class=" animate-[enter_.6s]">
+          <div key={skill.name} class="">
             <Card name={skill.name} srcImg={skill.srcImg} width={skill.width} />
           </div>
         ))}

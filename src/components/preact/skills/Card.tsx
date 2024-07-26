@@ -6,9 +6,9 @@ const Card: FC<{ name: string; srcImg?: string; width?: number }> = ({
   width,
 }) => {
   return (
-    <div class="flex items-center gap-2 py-3 pl-4 bg-highlight rounded-sm min-w-full cursor-default hover:animate-[shd_1s_ease-in-out]">
+    <div class="flex items-center gap-2 p-6 bg-highlight rounded-sm min-w-full cursor-default hover:scale-105 hover:bg-secondary transition-all animate-[enter_1s]">
       {srcImg && (
-        <img src={srcImg} alt={name} width={width || 25} height={25} />
+        <img src={srcImg} alt={name} width={width || 30} height={30} />
       )}
       <p>{name}</p>
     </div>

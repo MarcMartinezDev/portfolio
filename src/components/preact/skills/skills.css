@@ -1,5 +1,7 @@
+@import "../../../global.css";
+
 menu > div {
-  @apply flex items-center gap-2 py-1 px-2 rounded-sm cursor-pointer hover:bg-highlight transition-all;
+  @apply flex text-lg items-center px-2 py-1 gap-2 w-full rounded-sm cursor-pointer transition-all;
 }
 
 menu > div > li,
@@ -9,22 +11,4 @@ menu > div > svg {
 
 .selected {
   @apply text-text bg-highlight;
-}
-
-@keyframes enter {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes shd {
-  0% {
-    box-shadow: 0px 0px 8px #6e2a89;
-  }
-  100% {
-    box-shadow: none;
-  }
 }
