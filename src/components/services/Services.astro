@@ -3,6 +3,7 @@ import { SERVICES as services } from "./services.ts";
 import Card from "./Card.astro";
 ---
 
+<h2>Services</h2>
 <div class="grid grid-cols-3 w-full gap-5">
   {services.map(service => <Card desc={service.desc} />)}
 </div>

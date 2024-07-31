@@ -2,6 +2,14 @@
   @apply bg-[length:400%_400%] bg-gradient-to-br from-pink-600 to-red-600 animate-[bg-gradient_7s_ease_reverse_infinite];
 }
 
+.bg-gradient {
+  @apply bg-gradient-to-br from-pink-600 to-red-600;
+}
+
+.selection-menu {
+  @apply flex items-center gap-2 py-1 px-2 rounded-sm cursor-pointer text-text-low hover:bg-highlight transition-all;
+}
+
 @keyframes bg-gradient {
   0% {
     background-position: 14% 0%;

@@ -13,7 +13,7 @@ export const PROJECTS: ProjectCard[] = [
     desc: "My own website",
     href: "",
     name: "MarcMartinezDev",
-    srcImg: "/images/main.png",
+    srcImg: "/images/portfolio.png",
     status: "pending",
     tech: ["astro", "typescript", "tailwind"],
   },

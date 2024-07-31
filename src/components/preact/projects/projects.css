@@ -1,9 +1,5 @@
-.projects-container > div {
-  @apply flex items-center gap-2 py-1 px-2 rounded-sm cursor-pointer text-text-low hover:bg-highlight transition-all;
-}
-.projects-container  li {
-  @apply py-1;
-}
+@import "../../../global.css";
+
 .projects-all {
   @apply rounded-full w-3 h-3 bg-blue-300;
 }
@@ -12,4 +8,10 @@
 }
 .projects-finish {
   @apply rounded-full w-3 h-3 bg-green-300;
+}
+.project-card:hover .project-info {
+  @apply bg-gradient transition-all;
+}
+.project-card:hover .status-card {
+  @apply bg-transparent;
 }

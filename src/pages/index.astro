@@ -1,74 +1,35 @@
 ---
 import "../global.css";
-import Button from "../components/Button.astro";
+import Main from "../components/Main.astro";
 import Contact from "../components/contact/Contact.astro";
 import Layout from "../layouts/Layout.astro";
 import MenuSkills from "../components/preact/skills/Skills.tsx";
 import Projects from "../components/preact/projects/Projects.tsx";
 import Services from "../components/services/Services.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Marc Martinez Dev">
-  <section class="text-lg">
-    <div class="flex gap-4 mb-5 justify-end">
-      <a
-        href="https://github.com/MarcMartinezDev"
-        class="hover:scale-125 transition-all"
-        ><img src="/icons/github.webp" alt="" width="30" /></a
-      >
-      <a
-        href="https://www.linkedin.com/in/marc-martinez-her/"
-        class="hover:scale-125 transition-all"
-        ><img src="/icons/linkedin.webp" alt="" width="30" /></a
-      >
-    </div>
-    <h1 class="text-4xl bg-clip-text text-transparent bg-menu-gradient">
-      Hi! I'm Marc,
-    </h1>
-    <p>
-      Fullstack web developer with <span
-        class="text-2xl font-semibold bg-clip-text text-transparent bg-menu-gradient"
-        >+3 years</span
-      > programming and developing, desde Barcelona, España.
-    </p>
-    <p>
-      Centrado en crear aplicaciones y sitios web con código limpio y utilizando
-      las mejores prácticas, priorizando la escalabilidad y la optimización.
-    </p>
-    <p>
-      Interesado tanto en el front-end como en el back-end, al igual que
-      tecnologías de bases de datos.
-    </p>
-    <div class="grid grid-cols-4 gap-4 mt-6">
-      <Button link="#skills" text="Skills" img="/icons/tech.webp" />
-      <Button link="#services" text="Services" img="/icons/service.webp" />
-      <Button link="#projects" text="Projects" img="/icons/project.webp" />
-      <Button link="#contact" text="Contact" img="/icons/email.webp" />
-    </div>
+  <section>
+    <Main />
   </section>
   <section id="skills">
-    <h2>Skills</h2>
     <MenuSkills client:visible />
   </section>
-  <section id="services">
-    <h2>Services</h2>
-    <Services />
-  </section>
   <section id="projects">
-    <h2>Projects</h2>
     <Projects client:visible />
   </section>
+  <section id="services">
+    <Services />
+  </section>
   <section id="contact">
-    <h2>Contact</h2>
     <Contact />
   </section>
-  <footer class="flex items-center gap-2 justify-center mb-4">
-    <p>By</p>
-    <a href="">MarcMartinezDev</a>
+  <footer>
+    <Footer />
   </footer>
 </Layout>
 
-<!-- end of main section -->
 <style>
   menu > * {
     @apply bg-transparent;

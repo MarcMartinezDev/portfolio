@@ -3,7 +3,7 @@ import type { FC } from "preact/compat";
 
 const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
   return (
-    <div class="flex flex-col animate-[enter_.6s]">
+    <div class="project-card flex flex-col animate-[enter_.6s] hover:scale-105 transition-all">
       <div class="min-h-[200px]">
         <img
           src={srcImg}
@@ -11,7 +11,7 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
           class="object-cover w-full h-full rounded-t-sm"
         />
       </div>
-      <div class="flex flex-col justify-between h-full gap-2 p-2 bg-highlight rounded-sm">
+      <div class="project-info flex flex-col justify-between h-full gap-2 p-2 bg-highlight rounded-sm">
         <h3 class="text-center text-lg font-semibold">{name}</h3>
         <p>{desc}</p>
         <div class="grid grid-cols-2 gap-2 justify-evenly">
@@ -39,7 +39,7 @@ const Card: FC<ProjectCard> = ({ name, srcImg, desc, status, tech, href }) => {
               height={25}
             />
           </a>
-          <div class="flex w-fit rounded-sm items-center gap-2 px-2 bg-secondary">
+          <div class="status-card flex w-fit rounded-sm items-center gap-2 px-2 bg-secondary">
             {status === "finish" ? (
               <div class="projects-finish"></div>
             ) : (

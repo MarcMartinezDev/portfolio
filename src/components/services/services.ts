@@ -2,24 +2,21 @@ import { type Services } from "../../types.d";
 
 export const SERVICES: Services[] = [
   {
-    desc: "Diseño y Desarrollo de Páginas Web",
+    desc: "Web site design and development",
   },
   {
-    desc: "Desarrollo de Aplicaciones Web. (SPA, Frontend and Backend development)",
-    dark: true,
+    desc: "Web application development",
   },
   {
-    desc: "Mantenimiento y Actualización de Sitios Web",
-    dark: true,
+    desc: "Maintenance and updating of websites",
   },
   {
-    desc: "Optimización y Rendimiento",
+    desc: "Optimization and performance",
   },
   {
-    desc: "Desarrollo de APIs y Servicios Web",
+    desc: "API and web services development",
   },
   {
-    desc: "Creación de Contenido Interactivo",
-    dark: true,
+    desc: "Development and management of database systems",
   },
 ];

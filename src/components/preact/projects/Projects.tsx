@@ -13,23 +13,24 @@ const Projects = () => {
 
   return (
     <div class="flex flex-col gap-10">
+      <h2>Projects</h2>
       <menu class="menu projects-container flex gap-4">
         <div
-          class={menu === "all" ? "bg-menu-gradient" : ""}
+          class={menu === "all" ? "bg-gradient" : "selection-menu"}
           onClick={() => setMenu("all")}
         >
           <div class="projects-all"></div>
           <li class={menu === "all" ? "text-white" : ""}>All</li>
         </div>
         <div
-          class={menu === "pending" ? "bg-menu-gradient" : ""}
+          class={menu === "pending" ? "bg-gradient" : "selection-menu"}
           onClick={() => setMenu("pending")}
         >
           <div class="projects-pending"></div>
           <li class={menu === "pending" ? "text-white" : ""}>Pending</li>
         </div>
         <div
-          class={menu === "finish" ? "bg-menu-gradient" : ""}
+          class={menu === "finish" ? "bg-gradient" : "selection-menu"}
           onClick={() => setMenu("finish")}
         >
           <div class="projects-finish"></div>
