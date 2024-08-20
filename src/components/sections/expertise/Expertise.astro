@@ -1,0 +1,39 @@
+---
+import Card from "./Card.astro";
+---
+
+<section id="expertise" class="flex flex-col gap-8">
+  <h2 class="text-2xl text-first-text">Expertise</h2>
+  <h3>Front</h3>
+  <div class="card-container">
+    <Card name="html" />
+    <Card name="css" />
+    <Card name="javascript" />
+    <Card name="tailwind" />
+    <Card name="react" />
+    <Card name="astro" />
+  </div>
+  <h3>Back</h3>
+  <div class="card-container">
+    <Card name="node" />
+    <Card name="express" />
+    <Card name="sql" />
+    <Card name="prisma" />
+    <Card name="mongodb" />
+  </div>
+  <h3>Tools</h3>
+  <div class="card-container">
+    <Card name="github" />
+    <Card name="npm" />
+    <Card name="figma" />
+  </div>
+</section>
+
+<style>
+  h3 {
+    @apply w-fit py-1 px-4 rounded-xl bg-[#68ccc91e] text-marker;
+  }
+  .card-container {
+    @apply flex flex-wrap gap-4;
+  }
+</style>

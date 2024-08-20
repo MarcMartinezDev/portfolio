@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="title" content="marc martinez developer" />
+    <meta
+      name="description"
+      content="Marc Martínez, Full-Stack web developer. I transform ideas into dynamic, high-quality web experiences."
+    />
+    <meta
+      name="keywords"
+      content="developer, full stack, web development, marc, marc martinez, marc developer, web developer, database, frontend, backend, ui, ux, full stack developer, web projects, web services, web programming"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Marc Martinez" />
+    <!-- Open graph -->
+    <meta
+      property="og:title"
+      content="Marc Martinez - Full stack web developer"
+    />
+    <meta
+      property="og:description"
+      content="Full-Stack web developer. I transform ideas into dynamic, high-quality web experiences."
+    />
+    <meta property="og:image" content="URL IMG" />
+    <meta property="og:url" content="URL WEBSITE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marc Martinez" />
+    <meta property="og:image:alt" content="Marc Martinez logo" />
+    <title>{title}</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/logo.ico" sizes="16x16" />
+    <link rel="icon" href="/logo-32x32.png" sizes="32x32" />
+    <link rel="icon" href="/logo-48x48.png" sizes="48x48" />
+    <!-- Android -->
+    <link rel="icon" sizes="192x192" href="/logo-android.png" />
+    <!-- IOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo-ios.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/assets/Montserrat-Medium.ttf") format("ttf");
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  html {
+    @apply bg-primary text-second-text font-["Montserrat"] scroll-smooth bg-gradient-to-r from-primary via-[#081c42] to-[#0f192c] bg-[length:400%_400%] animate-[gradient_15s_ease_infinite];
+  }
+  body {
+    @apply relative w-full grid grid-cols-1 px-6 gap-20 sm:w-2/3 sm:m-auto sm:px-0 lg:w-4/5 lg:grid-cols-2 lg:gap-10 xl:gap-20 xl:w-2/3 2xl:w-[56%] 2xl:gap-36;
+  }
+</style>

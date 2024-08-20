@@ -1,0 +1,24 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<div
+  class="group relative aspect-square min-w-[100px] max-w-[110px] rounded-md bg-secondary overflow-hidden shadow-[0px_0px_0px] shadow-[#45487D] hover:shadow-[0px_0px_8px_#45487D] transition-all"
+>
+  <img
+    src={`/img/icons/${name}.webp`}
+    alt={`${name} tech icon`}
+    width={60}
+    height={60}
+    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] group-hover:translate-x-[150%] transition-all duration-500"
+  />
+  <p
+    class="absolute top-[50%] left-[50%] translate-x-[-400%] translate-y-[-50%] group-hover:translate-x-[-50%] transition-all duration-500 text-first-text uppercase"
+  >
+    {name}
+  </p>
+</div>

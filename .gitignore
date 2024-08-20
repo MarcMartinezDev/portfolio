@@ -1,0 +1,14 @@
+#files
+package-lock.json
+
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+#vscode
+.vscode/

@@ -1,0 +1,28 @@
+---
+import About from "./sections/About.astro";
+import Expertise from "./sections/expertise/Expertise.astro";
+import Projects from "./sections/projects/Projects.astro";
+import Services from "./sections/services/Services.astro";
+---
+
+<main class="flex flex-col gap-28 text-[#A3A5C2] lg:pt-20 lg:pb-20">
+  <About />
+  <Expertise />
+  <Projects />
+  <Services />
+  <footer class="flex justify-center">
+    <p class="text-sm">
+      Developed by Marc Martinez. Built with <a href="https://astro.build/"
+        >Astro</a
+      > and <a href="https://tailwindcss.com/">Tailwind</a>. Coded in <a
+        href="https://code.visualstudio.com/">Visual Studio Code</a
+      > and deployed with <a href="https://vercel.com/">Vercel</a>.
+    </p>
+  </footer>
+</main>
+
+<style>
+  a {
+    @apply text-marker;
+  }
+</style>

@@ -1,0 +1,28 @@
+---
+import Card from "./Card.astro";
+---
+
+<section id="projects" class="flex flex-col gap-8">
+  <h2 class="text-first-text text-2xl">Projects</h2>
+  <Card
+    desc="FuAPI is a simple REST API that provides you with fake user data for your projects or tests."
+    href="https://fu-api.vercel.app"
+    img="/img/projects/fuapi.webp"
+    title="FUAPI"
+    tech={["React", "Tailwind", "Express", "Mongodb"]}
+  />
+  <Card
+    desc="Little pokemon quiz, one of my first practices with React, uses calls to the pokemon API."
+    href="https://pokequizgame.netlify.app/"
+    img="/img/projects/pokequiz.webp"
+    title="POKE QUIZ GAME"
+    tech={["HTML", "CSS", "React", "Tailwind"]}
+  />
+  <Card
+    desc="First version of my portfolio."
+    href=""
+    img="/img/projects/portfolio.webp"
+    title="MARC MARTINEZ"
+    tech={["Astro", "Tailwind"]}
+  />
+</section>

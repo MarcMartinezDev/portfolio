@@ -1,0 +1,19 @@
+---
+interface Props {
+  text: string;
+  href: string;
+}
+
+const { text, href } = Astro.props;
+---
+
+<li class="group w-fit">
+  <a href={href} class="flex items-center gap-4 group-hover:text-first-text">
+    <div
+      class="h-[1px] w-10 bg-second-text group-hover:w-20 group-hover:bg-first-text transition-all duration-150"
+    >
+    </div><p>{text}</p></a
+  >
+</li>
+
+<style></style>
