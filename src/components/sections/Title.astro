@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  wd?: string;
+}
+
+const { title, wd } = Astro.props;
+---
+
+<div class="relative w-full mb-10">
+  <h2 class="relative text-first-text text-2xl z-10">{title}</h2>
+  <div
+    class=`absolute bottom-[2px] h-[10px] bg-[#68ccc995] left-6 ${wd ? wd : "w-24"} lg:hidden`
+  >
+  </div>
+</div>
